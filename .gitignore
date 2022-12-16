@@ -1,0 +1,12 @@
+*.gz
+*.aux
+*.fls
+*.log
+*.fdb_latexmk
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.toc
+*.DS_Store
+*.code-workspace

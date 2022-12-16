@@ -1,0 +1,71 @@
+\documentclass[11pt]{article}
+\usepackage{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage{inconsolata}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage[backend=biber,
+style=alphabetic,
+citestyle=authoryear]{biblatex} %Imports biblatex package
+
+\addbibresource{references.bib}
+\graphicspath{ {./assets/imgs/} }
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\usepackage[font={color=codegray},figurename=Figure,labelfont={it}]{caption}
+
+\newcommand{\temp}[1]{{\color{red}#1}}
+\newcommand{\centeredpic}[4][0.5]{
+    \begin{figure}[H]
+        \includegraphics[scale=#1]{#2}
+        \centering
+        \caption{#3}
+        \label{fig:#4}
+    \end{figure}
+}
+
+\begin{document}
+\begin{titlepage}
+    \begin{center}
+        \huge
+        \textbf{Forretnings modeller \& Transformationer}
+
+        \vspace{0.5cm}
+        Nemlig.com
+
+        \vspace{3cm}
+        \includegraphics[width=0.6\textwidth]{itu.jpeg}
+
+        \vspace{3cm}
+        \large
+        Andreas Nicolaj Tietgen 
+        
+        anti@itu.dk
+
+        \vfill
+        3. Jan. 2022
+    \end{center}
+\end{titlepage}
+
+\newpage
+
+\tableofcontents
+
+\newpage
+\input{pages/økosystem-rolle.tex}
+\input{pages/bm-design.tex}
+\input{pages/hypoteser-test.tex}
+
+\newpage
+\printbibliography
+
+% Add section for appendix
+\newpage
+\input{appendix/main-appendix.tex}
+
+\end{document}
